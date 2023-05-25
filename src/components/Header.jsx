@@ -11,19 +11,24 @@ const headerList = ['features', 'pricing', 'contact']
 
 const Header = () => {
     const menuRef = useRef(null)
+    const menuIcon = useRef(null)
+
+    const handleMenuToggle = () => {
+        const classList = menuRef.current.classList
+        classList.toggle('hidden')
+        classList.toggle('-z-10')
+        menuRef.current.previousElementSibling.classList.toggle('z-10')
+        menuIcon.current.setAttribute('src', classList.contains('hidden')? menu : close)
+    }
 
     return (
         <header>
-            <nav className="w-90 h-8 mx-auto flex items-center justify-between">
+            <nav className="w-90 h-9 mx-auto flex items-center justify-between">
                 <img src={logo} alt="logo icon" />
-                <img src={menu} alt="menu icon" />
+                <img className="cursor-pointer" src={menu} alt="menu icon" ref={menuIcon} onClick={handleMenuToggle} />
             </nav>
-            <aside className="w-full h-screen hidden absolute top-0 bottom-0 right-0 bg-blue-200/95">
-                <menu className="w-90 h-full mx-auto pt-5 pb-8 flex items-center justify-between flex-col" ref={menuRef}>
-                    <figure className="w-full flex items-center justify-between">
-                        <img src={logo} alt="logo icon" />
-                        <img src={close} alt="close menu icon" />
-                    </figure>
+            <aside className="w-full h-screen hidden absolute top-0 bottom-0 right-0 bg-blue-200/95" ref={menuRef}>
+                <menu className="w-90 h-full mx-auto pt-5 pb-8 flex items-center justify-between flex-col">
                     <ul className="w-full mt-6 mb-auto text-center">
                         {headerList.map((item, key) => <Item key={key} className="uppercase" text={item} color="white-100" size="bs" />)}
                     </ul>
