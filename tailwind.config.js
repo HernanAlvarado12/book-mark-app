@@ -41,7 +41,7 @@ export default {
         xs: '1.4rem',
         sm: '1.6rem',
         md: '1.8rem',
-        base: '2.4rem',
+        base: '2.2rem',
         lg: '3.2rem',
         xl: '4.2rem'
       },
@@ -62,7 +62,8 @@ export default {
   },
   plugins: [
     plugin(({ addVariant }) => {
-      addVariant('light', '@media (prefers-color-theme: light)')
+      addVariant('light', '@media (prefers-color-theme: light)'),
+      addVariant('child', ['&:nth-child(even)','&:nth-child(odd)'])
     })
   ],
 }
