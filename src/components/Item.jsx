@@ -4,7 +4,8 @@ const Item = forwardRef(({ className, text, color, size, children, onClick, onMo
     const colorVariants = {
         'blue-100': 'text-blue-100 border-b-2',
         'blue-200': 'text-blue-200',
-        'white-100': 'text-white tracking-widest border-blue-100 first-of-type:border-t child:border-b'
+        'white-100': 'text-white tracking-widest border-blue-100 first-of-type:border-t child:border-b',
+        'white-200': 'text-white',
     }
 
     const sizeVariants = {

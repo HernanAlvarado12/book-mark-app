@@ -9,7 +9,8 @@ import illustration3 from "../assets/illustration-features-tab-3.svg"
 
 import arrow from "../assets/icon-arrow.svg"
 
-
+import facebook from "../assets/icon-facebook.svg"
+import twitter from "../assets/icon-twitter.svg"
 
 const companies = [chrome, firefox, opera]
 
@@ -30,4 +31,9 @@ const icons = {
     arrow
 }
 
-export { companies, illustration, icons, featuresImages }
+const metaCompanies = [
+    facebook, 
+    twitter
+]
+
+export { companies, illustration, icons, featuresImages, metaCompanies }
