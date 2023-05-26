@@ -3,7 +3,7 @@
 const Input = ({ className, type, value, color, size, name, id, placeholder, label, children, onClick, onChange, }) => {
     const colorVariants = {
         red: 'text-white border-2 border-red cursor-pointer bg-red',
-        slate: 'text-slate-400 border border-slate-400 bg-white placeholder-gray-400 focus:ring-2 focus:ring-transparent invalid:border-red invalid:focus:ring-red',
+        slate: 'text-slate-400 border border-transparent bg-white placeholder-gray-400 focus:ring-1 focus:ring-transparent invalid:border-red invalid:focus:ring-red',
     }
 
     const sizeVariants = {

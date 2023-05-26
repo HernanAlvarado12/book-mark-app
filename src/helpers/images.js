@@ -9,6 +9,8 @@ import illustration3 from "../assets/illustration-features-tab-3.svg"
 
 import arrow from "../assets/icon-arrow.svg"
 
+
+
 const companies = [chrome, firefox, opera]
 
 const illustration = {
@@ -18,8 +20,14 @@ const illustration = {
     illustration3,
 }
 
+const featuresImages = [
+    illustration1,
+    illustration2,
+    illustration3
+]
+
 const icons = {
     arrow
 }
 
-export { companies, illustration, icons }
+export { companies, illustration, icons, featuresImages }

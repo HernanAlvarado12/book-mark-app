@@ -1,9 +1,15 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Item } from "./Item"
 import { Comment } from "./Comment"
+import { MainFeaturesDetail } from "./MainFeaturesDetail"
+import { featuresImages } from "../helpers/images"
+import { features as featuresList } from "../helpers/data"
 
-const MainFeatures = ({ comments, features }) => {
-    const ref = useRef(null)
+const featuresItems = ['Simple Bookmarking', 'Speedy Searching', 'Easy Sharing']
+
+
+const MainFeatures = ({ path, comments }) => {
+    const [indexFeature, setIndexFeature] = useState(0)
     const listRef = useRef(null)
 
     useEffect(() => {
@@ -11,21 +17,19 @@ const MainFeatures = ({ comments, features }) => {
     }, [])
 
     const handleClickFeature = (event) => {
-        if(!ref.current) {
-            listRef.current.querySelector('.active').classList.remove('active')
-        }else if(ref.current) {
-            ref.current.classList.remove('active')
-        }
+        listRef.current.querySelector('.active').classList.remove('active')
         event.target.classList.add('active')
-        ref.current = event.target
+        const newIndex = (indexFeature +1) % featuresList.length
+        setIndexFeature(newIndex)
     }
 
     return (
         <section>
             <Comment classText="mt-1 mb-3" title={comments[1].title} text={comments[1].text} sizeTitle="bs" sizeText="sm" />
             <ul className="mt-5 mb-10 flex items-center flex-col gap-y-1.5 text-center" ref={listRef}>
-                {features.map((item, key) => <Item key={key} className="w-3/4 cursor-pointer" text={item} color="blue-100" size="md2" onClick={handleClickFeature} />)}
+                {featuresItems.map((item, key) => <Item key={key} className="w-3/4 cursor-pointer" text={item} color="blue-100" size="md2" onClick={handleClickFeature} />)}
             </ul>
+            <MainFeaturesDetail content={featuresList[indexFeature]} path={featuresImages[indexFeature]} />
         </section>
     )
 }

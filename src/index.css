@@ -20,4 +20,8 @@
   .active {
     @apply border-red;
   }
+
+  .full {
+    @apply h-full;
+  }
 }
