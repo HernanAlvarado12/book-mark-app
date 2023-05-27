@@ -24,7 +24,7 @@ const Header = () => {
     }
 
     return (
-        <header className="base:w-85 base:h-9 base:mx-auto base:flex base:items-center base:justify-between">
+        <header className="base:w-85 base:h-9 base:mx-auto base:flex base:items-center base:justify-between xl:max-w-screen-2xl xl:mx-auto">
             <nav className="w-90 h-9 mx-auto flex items-center justify-between base:w-auto base:h-auto base:m-0">
                 <img src={navbarImages.logo} alt="logo icon" />
                 <img className="cursor-pointer base:hidden" src={navbarImages.menu} alt="menu icon" ref={menuIcon} onClick={handleMenuToggle} />
