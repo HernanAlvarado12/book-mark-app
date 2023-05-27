@@ -32,7 +32,7 @@ const MainQuestion = ({ comments, questions, icons }) => {
                     <Item 
                         className="w-full flex items-center flex-col leading-relaxed cursor-pointer overflow-hidden" 
                         key={key} 
-                        text={<Span className="w-full flex items-center justify-between" text={<>{item.title}<img src={icons.arrow}/></>} color="blue-200" size="md" />} 
+                        text={<Span className="w-full flex items-center justify-between hover:text-red" text={<>{item.title}<img src={icons.arrow}/></>} color="blue-200" size="md" />} 
                         color="blue-200" 
                         size="sm" 
                         children={<p className="h-0 text-blue-100">{item.text}</p>}
