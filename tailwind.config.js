@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        bs: '900px'
+        base: '900px'
       },
       spacing: {
         '0.2': '0.2rem',
