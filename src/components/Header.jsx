@@ -33,7 +33,7 @@ const Header = () => {
                 <menu className="w-90 h-screen mx-auto pt-5 pb-8 flex items-center justify-between flex-col base:w-full base:h-auto base:p-0 base:flex-row">
                     <ul className="w-full max-w-4xl mt-6 mb-auto flex items-center flex-col text-center base:w-full base:max-w-none base:m-0 base:flex-row base:justify-end base:gap-x-3">
                         {headerList.map((item, key) => <Item key={key} className="w-full uppercase cursor-pointer base:w-auto base:text-blue-200 base:text-sm base:child:border-0 base:hover:text-red" text={item} color="white-100" size="bs" />)}
-                        <Button className="w-full mt-3 uppercase tracking-widest base:w-15 base:h-4 base:m-0 base:font-normal base:border-red base:bg-red base:hover:text-red base:hover:border-red base:hover:bg-white" text="login" color="transparent" size="md" />
+                        <Button className="w-full mt-3 base:w-15 base:h-4 base:m-0" text="login" color="transparent" size="md" />
                     </ul>
                     <LinkCompany className="flex items-center gap-x-2 base:hidden" companies={metaCompanies} />
                 </menu>
