@@ -25,8 +25,8 @@ const MainFeatures = ({ path, comments }) => {
 
     return (
         <section>
-            <Comment classText="mt-1 mb-3 sm:mt-1.5" title={comments[1].title} text={comments[1].text} sizeTitle="bs" sizeText="sm" />
-            <ul className="mt-5 mb-10 flex items-center flex-col gap-y-1.5 text-center" ref={listRef}>
+            <Comment className="sm:max-w-4xl sm:mx-auto" classText="mt-1 mb-3 sm:mt-1.5" title={comments[1].title} text={comments[1].text} sizeTitle="bs" sizeText="sm" />
+            <ul className="mt-5 mb-10 flex items-center flex-col gap-y-1.5 text-center base:flex-row" ref={listRef}>
                 {featuresItems.map((item, key) => <Item key={key} className="w-3/4 max-w-sm cursor-pointer" text={item} color="blue-100" size="md2" onClick={handleClickFeature} />)}
             </ul>
             <MainFeaturesDetail content={featuresList[indexFeature]} path={featuresImages[indexFeature]} />
