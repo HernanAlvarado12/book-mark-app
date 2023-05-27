@@ -13,7 +13,7 @@ const Main = () => {
             <main className="w-90 mx-auto mt-5 mb-15 relative">
                 <MainHero path={illustration.illustrationHero} comments={comments} />
                 <MainFeatures comments={comments} path={illustration.illustration1} />
-                <MainExtension className="mb-10" extensions={extensions} comments={comments} companies={companies} />
+                <MainExtension className="mb-10 sm:mb-12" extensions={extensions} comments={comments} companies={companies} />
                 <MainQuestion comments={comments} questions={questions} icons={icons} />
             </main>
             <MainForm form={form}/>

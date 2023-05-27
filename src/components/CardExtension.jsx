@@ -2,7 +2,7 @@ import { Button } from "./Button"
 
 const CardExtension = ({ path, alt, title, version, textButton }) => {
     return (
-        <article className="w-full pt-8 pb-3 px-2 flex items-center flex-col rounded-3xl shadow shadow-slate-500">
+        <article className="w-full max-w-xl pt-6 pb-3 px-2 grid justify-items-center rounded-3xl shadow shadow-slate-500 sm:pt-7 sm:last:col-span-2 sm:last:justify-self-center">
             {path && <img src={path} alt={alt} />}
             <h3 className="mt-2 text-blue-200 font-bold text-md">{title}</h3>
             <p className="text-sm">{version}</p>

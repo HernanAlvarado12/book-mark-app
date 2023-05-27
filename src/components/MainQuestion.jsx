@@ -25,7 +25,7 @@ const MainQuestion = ({ comments, questions, icons }) => {
     }
 
     return (
-        <div>
+        <section className="max-w-3xl mx-auto">
             <Comment classText="mt-1 mb-4" title={comments[4].title} text={comments[4].text} sizeTitle="bs" sizeText="sm" />
             <ul className="w-full flex flex-col gap-y-2">
                 {questions.map((item, key) => (
@@ -41,7 +41,7 @@ const MainQuestion = ({ comments, questions, icons }) => {
                 ))}
             </ul>
             <Button className="mx-auto mt-6 block" text="More Info" color="blue" size="sm2" />
-        </div>
+        </section>
     )
 }
 

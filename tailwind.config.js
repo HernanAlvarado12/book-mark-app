@@ -60,8 +60,8 @@ export default {
           200: 'hsl(229, 31%, 21%)'
         }
       },
-      transitionDelay: {
-        
+      aspectRatio: {
+        sm: '2/1'
       },
     },
   },

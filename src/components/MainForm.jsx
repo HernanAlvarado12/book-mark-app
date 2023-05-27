@@ -19,7 +19,7 @@ const MainForm = ({ form }) => {
 
    return (
        <section className="w-full py-8 flex items-center justify-center bg-blue">
-           <div className="w-85 flex items-center flex-col group">
+           <div className="w-85 max-w-2xl flex items-center flex-col group">
                <Comment className="leading-relaxed" classText="mt-1" title={form.title} text={form.text} colorTitle="white" colorText="white" sizeTitle="sm" sizeText="bs" />
                <form className="w-full" onSubmit={handleSubmitData}>
                    <Input className="w-full mt-2 relative z-10 peer" type="email" value={email} color="slate" size="sm" id="emailData" placeholder="user@gmail.com" children={errorInput} onChange={handleChangeEmail} />
